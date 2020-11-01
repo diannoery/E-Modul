@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_empat"
+    app:startDestination="@id/quizMateriEmpatFragment">
+
+    <fragment
+        android:id="@+id/quizMateriEmpatFragment"
+        android:name="com.example.mediapembelajaran.ui.quiz.QuizMateriEmpatFragment"
+        android:label="fragment_quiz_materi_empat"
+        tools:layout="@layout/fragment_quiz_materi_empat" >
+        <action
+            android:id="@+id/action_quizMateriEmpatFragment_to_resultFragment4"
+            app:destination="@id/resultFragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment4"
+        android:name="com.example.mediapembelajaran.ui.quiz.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment4_to_menuActivity"
+            app:destination="@id/menuActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/menuActivity"
+        android:name="com.example.mediapembelajaran.MenuActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+</navigation>

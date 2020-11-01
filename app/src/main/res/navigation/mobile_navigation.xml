@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mediapembelajaran.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.mediapembelajaran.ui.materi.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_syntaxSatuFragment"
+            app:destination="@id/syntaxSatuFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_materiFragment"
+            app:destination="@id/materiFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_materiTigaFragment"
+            app:destination="@id/materiTigaFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_materiEmpatFragment"
+            app:destination="@id/materiEmpatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.mediapembelajaran.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_quiz"
+        android:name="com.example.mediapembelajaran.ui.quiz.QuizFragment"
+        android:label="@string/menu_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_nav_quiz_to_quizActivity"
+            app:destination="@id/quizActivity"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_nav_quiz_to_quizDuaActivity"
+            app:destination="@id/quizDuaActivity" />
+        <action
+            android:id="@+id/action_nav_quiz_to_quizTigaActivity"
+            app:destination="@id/quizTigaActivity" />
+        <action
+            android:id="@+id/action_nav_quiz_to_quizEmpatActivity"
+            app:destination="@id/quizEmpatActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/quizActivity"
+        android:name="com.example.mediapembelajaran.QuizActivity"
+        android:label="activity_quiz"
+        tools:layout="@layout/activity_quiz" />
+    <fragment
+        android:id="@+id/nav_petunjuk"
+        android:name="com.example.mediapembelajaran.ui.petunjuk.PetunjukFragment"
+        android:label="@string/menu_petunjuk"
+        tools:layout="@layout/fragment_petunjuk" />
+    <fragment
+        android:id="@+id/nav_pendahuluan"
+        android:name="com.example.mediapembelajaran.ui.pendahuluan.PendahuluanFragment"
+        android:label="Pendahuluan"
+        tools:layout="@layout/fragment_pendahuluan" />
+    <fragment
+        android:id="@+id/nav_profil"
+        android:name="com.example.mediapembelajaran.ui.profil.ProfilFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/nav__pustaka"
+        android:name="com.example.mediapembelajaran.ui.daftarpustaka.PustakaFragment"
+        android:label="Daftar pustaka"
+        tools:layout="@layout/fragment_pustaka" />
+    <fragment
+        android:id="@+id/nav_kikd"
+        android:name="com.example.mediapembelajaran.ui.kidi.KiKdFragment"
+        android:label="KI &amp; KD"
+        tools:layout="@layout/fragment_ki_kd" >
+        <action
+            android:id="@+id/action_nav_kikd_to_kiKdDetailsFragment"
+            app:destination="@id/kiKdDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kiKdDetailsFragment"
+        android:name="com.example.mediapembelajaran.ui.kidi.KiKdDetailsFragment"
+        android:label="KI &amp; KD"
+        tools:layout="@layout/fragment_ki_kd_details" />
+    <fragment
+        android:id="@+id/syntaxSatuFragment"
+        android:name="com.example.mediapembelajaran.ui.materi.SyntaxSatuFragment"
+        android:label="fragment_syntax_satu"
+        tools:layout="@layout/fragment_syntax_satu" >
+        <action
+            android:id="@+id/action_syntaxSatuFragment_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+    </fragment>
+    <fragment
+        android:id="@+id/materiFragment"
+        android:name="com.example.mediapembelajaran.ui.materi.MateriFragment"
+        android:label="Materi"
+        tools:layout="@layout/fragment_materi" />
+    <fragment
+        android:id="@+id/materiTigaFragment"
+        android:name="com.example.mediapembelajaran.ui.materi.MateriTigaFragment"
+        android:label="Materi 3"
+        tools:layout="@layout/fragment_materi_tiga" />
+    <fragment
+        android:id="@+id/materiEmpatFragment"
+        android:name="com.example.mediapembelajaran.ui.materi.MateriEmpatFragment"
+        android:label="Materi 4"
+        tools:layout="@layout/fragment_materi_empat" />
+    <activity
+        android:id="@+id/quizDuaActivity"
+        android:name="com.example.mediapembelajaran.QuizDuaActivity"
+        android:label="activity_quiz_dua"
+        tools:layout="@layout/activity_quiz_dua" />
+    <activity
+        android:id="@+id/quizTigaActivity"
+        android:name="com.example.mediapembelajaran.QuizTigaActivity"
+        android:label="activity_quiz_tiga"
+        tools:layout="@layout/activity_quiz_tiga" />
+    <activity
+        android:id="@+id/quizEmpatActivity"
+        android:name="com.example.mediapembelajaran.QuizEmpatActivity"
+        android:label="activity_quiz_empat"
+        tools:layout="@layout/activity_quiz_empat" />
+</navigation>
