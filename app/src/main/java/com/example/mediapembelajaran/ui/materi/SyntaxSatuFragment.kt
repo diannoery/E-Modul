@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
@@ -42,10 +43,13 @@ class SyntaxSatuFragment : Fragment() {
         println(materi)
 
         if (materi == "Peralatan Pengolahan Makanan"){
+            (activity as AppCompatActivity).supportActionBar?.title = "Materi 1"
             MateriSatu(view)
         }else if (materi == "Potongan Bahan Makananan"){
+            (activity as AppCompatActivity).supportActionBar?.title = "Materi 2"
             MateriDua(view)
         }else if (materi == "Teknik Pengolahan Makanan"){
+            (activity as AppCompatActivity).supportActionBar?.title = "Materi 3"
             MateriTiga(view)
         }
 
@@ -54,7 +58,7 @@ class SyntaxSatuFragment : Fragment() {
     private fun MateriSatu(view: View) {
         textView29.text="Pada tahap ini kamu diminta untuk  dapat memusatkan perhatian pada materi pembelajaran dengan membaca dan melihat gambar atau video."
         textView31.text="Peralatan Pengolahan Makanan"
-        textView27.text="Apakah sebelumnya kamu sudah pernah melihat dan mengetahui area kerja dalam industri boga? "
+        textView17.text="Apakah sebelumnya kamu sudah pernah melihat dan mengetahui area kerja dalam industri boga? "
         textView33.text =
             "     Sebuah hotel yang memiliki fasilitas unggulan pasti memiliki dapur yang memadai. Peralatan dapur di hotel masa kini harus diperhatikan dan tidak boleh sembarangan. Hotel yang memiliki fasilitas bagus tentunya menyediakan perlengkapan dapur yang memilki kualitas tinggi. Peralatan dapur yang ada pada hotel tentunya berbeda dengan peralatan yang ada pada dapur rumah. Pada umumnya peralatan yang ada di dapur hotel lebih besar serta menggunakan teknologi yang lebih canggih."
         textView34.text =
@@ -84,6 +88,8 @@ class SyntaxSatuFragment : Fragment() {
         textView17.text="     Tahukah kamu bahwa dalam memotong bahan makanan tidak boleh sembarangan dan asal-asalan?  "
         textView33.text="     Sebelum melakukan pengolahan makanan, terdapat langkah yang harus dilakukan terlebih dahulu, salah satunya memotong bahan makanan. Bahan makanan yang membutuhkan pemotongan sebelum proses pengolahan yaitu daging, unggas, ikan, sayuran, dan buah-buahan. Pemotongan bahan makanan dilakukan bukan tanpa alasan, memotong bahan makanan secara seragam berguna untuk membuat bahan makanan mencapai tingkat kematangan sempurna saat dimasak. Selain itu, potongan bahan makanan akan mempermudah proses pengolahan, mempercantik hidangan, dan menambah selera makan."
         textView34.text="     Tahukah kamu bahwa terdapat beraneka macam nama dan jenis dari potongan bahan makanan? "
+       textView36.visibility =View.GONE
+        last_card.visibility = View.GONE
         val youTubePlayerView: YouTubePlayerView = view.findViewById(R.id.youtube_view)
         lifecycle.addObserver(youTubePlayerView)
 

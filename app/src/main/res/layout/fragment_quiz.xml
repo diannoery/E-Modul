@@ -14,6 +14,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
+
+        app:cardBackgroundColor="#B2FFFFFF"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -29,40 +32,43 @@
                 android:id="@+id/textView54"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Petunjuk Mengerjakan Soal" />
+                android:text="Petunjuk Mengerjakan Soal"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/textView50"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
                 android:drawableStart="@drawable/ic_baseline_check_24"
                 android:justificationMode="inter_word"
+                android:padding="5dp"
                 android:text="Bacalah soal-soal berikut ini dengan baik, kemudian pilihlah jawaban yang paling tepat!" />
+
             <TextView
                 android:id="@+id/textView51"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
                 android:drawableStart="@drawable/ic_baseline_check_24"
                 android:justificationMode="inter_word"
+                android:padding="5dp"
                 android:text="Setelah menjawab seluruh soal, lakukanlah “Koreksi Jawaban”" />
+
             <TextView
                 android:id="@+id/textView52"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
                 android:drawableStart="@drawable/ic_baseline_check_24"
                 android:justificationMode="inter_word"
+                android:padding="5dp"
                 android:text="Nilai KKM adalah 80, jika kamu “Belum Lulus”, maka cobalah lagi!" />
+
             <TextView
                 android:id="@+id/textView53"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
                 android:drawableStart="@drawable/ic_baseline_check_24"
                 android:justificationMode="inter_word"
+                android:padding="5dp"
                 android:text="Selamat mengerjakan!" />
 
         </LinearLayout>

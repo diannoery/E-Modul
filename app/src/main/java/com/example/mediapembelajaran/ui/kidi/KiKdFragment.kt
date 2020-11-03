@@ -34,7 +34,7 @@ class KiKdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        kidi_data.layoutManager= LinearLayoutManager(activity, RecyclerView.HORIZONTAL,false)
+        kidi_data.layoutManager= LinearLayoutManager(activity)
         kikdRecycleView = KikdRecycleView(kikdViewModel.kikdLiveData.value!!)
         kidi_data.adapter= kikdRecycleView
         kikdViewModel.kikdLiveData.observe(viewLifecycleOwner, Observer {

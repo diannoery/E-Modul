@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.mediapembelajaran.ui.materi.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_materi"
         tools:layout="@layout/fragment_gallery" >
         <action
             android:id="@+id/action_nav_gallery_to_syntaxSatuFragment"
@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_nav_gallery_to_materiEmpatFragment"
             app:destination="@id/materiEmpatFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_petunjukKegiatanFragment"
+            app:destination="@id/petunjukKegiatanFragment" />
     </fragment>
 
     <fragment
@@ -132,4 +135,9 @@
         android:name="com.example.mediapembelajaran.QuizEmpatActivity"
         android:label="activity_quiz_empat"
         tools:layout="@layout/activity_quiz_empat" />
+    <fragment
+        android:id="@+id/petunjukKegiatanFragment"
+        android:name="com.example.mediapembelajaran.ui.materi.petunjuk.PetunjukKegiatanFragment"
+        android:label="Petunjuk Kegiatan Belajar"
+        tools:layout="@layout/fragment_petunjuk_kegiatan" />
 </navigation>

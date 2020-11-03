@@ -46,6 +46,7 @@ class GalleryFragment : Fragment() {
 
         val materisatu = arrayOf(
             "Peralatan Pengolahan Makanan",
+            "Petunjuk Kegiatan Belajar",
             "Syntax 1",
             "Syntax 2",
             "Syntax 3",
@@ -55,6 +56,7 @@ class GalleryFragment : Fragment() {
         )
         val materidua = arrayOf(
             "Potongan Bahan Makananan",
+            "Petunjuk Kegiatan Belajar",
             "Syntax 1",
             "Syntax 2",
             "Syntax 3",
@@ -64,6 +66,7 @@ class GalleryFragment : Fragment() {
         )
         val materitiga = arrayOf(
             "Teknik Pengolahan Makanan",
+            "Petunjuk Kegiatan Belajar",
             "Syntax 1",
             "Syntax 2",
             "Syntax 3",
@@ -73,6 +76,7 @@ class GalleryFragment : Fragment() {
         )
         val materiempat = arrayOf(
             "Bumbu dan Rempah",
+            "Petunjuk Kegiatan Belajar",
             "Syntax 1",
             "Syntax 2",
             "Syntax 3",
@@ -107,6 +111,14 @@ class GalleryFragment : Fragment() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 
                 when (materisatu[p2]) {
+                    "Petunjuk Kegiatan Belajar"->{
+                        navController = p1?.let { Navigation.findNavController(it) }!!
+                        navController.navigate(
+                            R.id.action_nav_gallery_to_petunjukKegiatanFragment,
+                            bundleOf("materi" to "Peralatan Pengolahan Makanan")
+                        )
+                        spinner.setSelection(0)
+                    }
                     "Syntax 1" -> {
                         navController = p1?.let { Navigation.findNavController(it) }!!
                         navController.navigate(
@@ -169,6 +181,14 @@ class GalleryFragment : Fragment() {
         spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 when (materidua[p2]) {
+                    "Petunjuk Kegiatan Belajar"->{
+                        navController = p1?.let { Navigation.findNavController(it) }!!
+                        navController.navigate(
+                            R.id.action_nav_gallery_to_petunjukKegiatanFragment,
+                            bundleOf("materi" to "Potongan Bahan Makananan")
+                        )
+                        spinner2.setSelection(0)
+                    }
                     "Syntax 1" -> {
                         navController = p1?.let { Navigation.findNavController(it) }!!
                         navController.navigate(
@@ -231,6 +251,14 @@ class GalleryFragment : Fragment() {
         spinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 when (materitiga[p2]) {
+                    "Petunjuk Kegiatan Belajar"->{
+                        navController = p1?.let { Navigation.findNavController(it) }!!
+                        navController.navigate(
+                            R.id.action_nav_gallery_to_petunjukKegiatanFragment,
+                            bundleOf("materi" to "Teknik Pengolahan Makanan")
+                        )
+                        spinner3.setSelection(0)
+                    }
                     "Syntax 1" -> {
                         navController = p1?.let { Navigation.findNavController(it) }!!
                         navController.navigate(
@@ -293,6 +321,14 @@ class GalleryFragment : Fragment() {
         spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 when (materiempat[p2]) {
+                    "Petunjuk Kegiatan Belajar"->{
+                        navController = p1?.let { Navigation.findNavController(it) }!!
+                        navController.navigate(
+                            R.id.action_nav_gallery_to_petunjukKegiatanFragment,
+                            bundleOf("materi" to "Materi 4")
+                        )
+                        spinner4.setSelection(0)
+                    }
                     "Syntax 1" -> {
                         navController = p1?.let { Navigation.findNavController(it) }!!
                         navController.navigate(
