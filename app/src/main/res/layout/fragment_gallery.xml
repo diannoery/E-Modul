@@ -37,8 +37,8 @@
                         android:id="@+id/imageView3"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/alatmasak" />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/materi4" />
 
                     <TextView
                         android:id="@+id/materisatu"
@@ -78,8 +78,8 @@
                         android:id="@+id/imageView4"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/potongan" />
+                        android:scaleType="fitXY"
+                        android:src="@drawable/materi3" />
 
                     <TextView
                         android:id="@+id/materidua"
@@ -120,7 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cooking" />
+                        android:src="@drawable/materi2" />
 
                     <TextView
                         android:id="@+id/materitiga"
@@ -159,8 +159,8 @@
                         android:id="@+id/imageView6"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bumbu" />
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/materi1" />
 
                     <TextView
                         android:id="@+id/materiempat"

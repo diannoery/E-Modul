@@ -30,7 +30,7 @@ class PetunjukKegiatanFragment : Fragment() {
         textView55.text= "Petunjuk Kegiatan Belajar"
         textView56.text= " Kegiatan belajar pada materi ini terdiri dari 6 (enam) sintak/langkah pembelajaran."
         textView57.text= " Ikutilah langkah-langkah pembelajaran secara berurutan dimulai dari langkah 1 sampai dengan 6."
-        textView58.text= " Kerjakanlah setiap tugas yang ada dalam kegiatan pembelajaran secara berurutan sesuai dengan langkah pembelajaran dan buatlah ke dalam bentuk file document yang dapat diunggah pada link berikut ini:"
+        textView58.text= " Kerjakanlah setiap tugas yang ada dalam kegiatan pembelajaran secara berurutan sesuai dengan langkah pembelajaran dan buatlah ke dalam bentuk file document."
         textView59.text= " Selamat Belajar!"
     }
 }
