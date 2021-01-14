@@ -332,7 +332,7 @@ class GalleryFragment : Fragment() {
                     "Syntax 1" -> {
                         navController = p1?.let { Navigation.findNavController(it) }!!
                         navController.navigate(
-                            R.id.action_nav_gallery_to_materiFragment,
+                            R.id.action_nav_gallery_to_materiEmpatt,
                             bundleOf("materi" to "KegiatanBelajar4-1","syntax" to "syntaxSatu" )
                         )
                         spinner4.setSelection(0)

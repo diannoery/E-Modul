@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_nav_gallery_to_petunjukKegiatanFragment"
             app:destination="@id/petunjukKegiatanFragment" />
+        <action
+            android:id="@+id/action_nav_gallery_to_materiEmpatt"
+            app:destination="@id/materiEmpatt" />
     </fragment>
 
     <fragment
@@ -140,4 +143,9 @@
         android:name="com.example.mediapembelajaran.ui.materi.petunjuk.PetunjukKegiatanFragment"
         android:label="Petunjuk Kegiatan Belajar"
         tools:layout="@layout/fragment_petunjuk_kegiatan" />
+    <fragment
+        android:id="@+id/materiEmpatt"
+        android:name="com.example.mediapembelajaran.ui.materi.MateriEmpatt"
+        android:label="fragment_materi_empatt"
+        tools:layout="@layout/fragment_materi_empatt" />
 </navigation>

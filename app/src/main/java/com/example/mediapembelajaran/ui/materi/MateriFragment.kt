@@ -1,13 +1,13 @@
 package com.example.mediapembelajaran.ui.materi
 
-import android.app.Activity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.mediapembelajaran.R
+import com.github.barteksc.pdfviewer.util.FitPolicy
 import kotlinx.android.synthetic.main.fragment_materi.*
 
 
@@ -33,20 +33,21 @@ class MateriFragment : Fragment() {
         val syntax = arguments?.getString("syntax")
 
 
+
         if (materi == "KegiatanBelajar"){
-            MateriSatu(syntax,materi)
+            MateriSatu(syntax, materi)
             (activity as AppCompatActivity).supportActionBar?.title = "Materi 1"
         }else if(materi == "KegiatanBelajar2"){
-            MateriDua(syntax,materi)
+            MateriDua(syntax, materi)
             (activity as AppCompatActivity).supportActionBar?.title = "Materi 2"
         }else if(materi == "KegiatanBelajar3"){
-            MateriTiga(syntax,materi)
+            MateriTiga(syntax, materi)
             (activity as AppCompatActivity).supportActionBar?.title = "Materi 3"
         }else if(materi == "KegiatanBelajar4-1"){
-            MateriEmpat(syntax,materi)
+            MateriEmpat(syntax, materi)
             (activity as AppCompatActivity).supportActionBar?.title = "Materi 4"
         }else if(materi == "KegiatanBelajar4-2"){
-            MateriEmpat(syntax,materi)
+            MateriEmpat(syntax, materi)
             (activity as AppCompatActivity).supportActionBar?.title = "Materi 4"
         }
 
@@ -54,32 +55,34 @@ class MateriFragment : Fragment() {
     }
 
     private fun MateriTiga(syntax: String?, materi: String) {
-        SyntaxKegiatanBelajar(syntax,materi)
+        SyntaxKegiatanBelajar(syntax, materi)
     }
     private fun MateriEmpat(syntax: String?, materi: String) {
-        SyntaxKegiatanBelajar(syntax,materi)
+        SyntaxKegiatanBelajar(syntax, materi)
     }
     private fun MateriSatu(syntax: String?, materi: String) {
-        SyntaxKegiatanBelajar(syntax,materi)
+        SyntaxKegiatanBelajar(syntax, materi)
     }
 
     private fun MateriDua(syntax: String?, materi: String) {
-       SyntaxKegiatanBelajar(syntax,materi)
+       SyntaxKegiatanBelajar(syntax, materi)
     }
 
     private fun SyntaxKegiatanBelajar(syntax: String?, materi: String) {
         if (syntax== "syntaxSatu"){
             materi_pdf.fromAsset("$materi.pdf")
-                .pages(0,1)
+                .pages(0, 1)
+                .pageFitPolicy(FitPolicy.WIDTH)
                 .load()
+
         }else if (syntax== "syntaxDua"){
           if (materi== "KegiatanBelajar2"){
               materi_pdf.fromAsset("$materi.pdf")
-                  .pages(1,2)
+                  .pages(1, 2)
                   .load()
           }else{
               materi_pdf.fromAsset("$materi.pdf")
-                  .pages(2,3)
+                  .pages(2, 3)
                   .load()
           }
         }else if (syntax == "syntaxTiga"){
@@ -96,15 +99,15 @@ class MateriFragment : Fragment() {
         }else if (syntax == "syntaxEmpat"){
             if (materi == "KegiatanBelajar2"){
                 materi_pdf.fromAsset("$materi.pdf")
-                    .pages(4,5,6,7,8)
+                    .pages(4, 5, 6, 7, 8)
                     .load()
             }else if(materi == "KegiatanBelajar3"){
                 materi_pdf.fromAsset("$materi.pdf")
-                    .pages(5,6)
+                    .pages(5, 6)
                     .load()
             }else if(materi == "KegiatanBelajar4-1"){
                 materi_pdf.fromAsset("$materi.pdf")
-                    .pages(5,6)
+                    .pages(5, 6)
                     .load()
             }else if(materi == "KegiatanBelajar4-2"){
                 materi_pdf.fromAsset("$materi.pdf")
@@ -112,7 +115,7 @@ class MateriFragment : Fragment() {
                     .load()
             }else{
                 materi_pdf.fromAsset("$materi.pdf")
-                    .pages(5,6,7,8,9)
+                    .pages(5, 6, 7, 8, 9)
                     .load()
             }
         }else if (syntax == "syntaxLima"){
