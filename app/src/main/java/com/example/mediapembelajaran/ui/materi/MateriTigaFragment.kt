@@ -12,9 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mediapembelajaran.R
 import com.example.mediapembelajaran.ui.kidi.KiKdViewModel
 import com.example.mediapembelajaran.ui.kidi.KikdRecycleView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_ki_kd.*
 import kotlinx.android.synthetic.main.fragment_materi.*
 import kotlinx.android.synthetic.main.fragment_materi.materi_pdf
+import kotlinx.android.synthetic.main.fragment_materi_empat.*
 import kotlinx.android.synthetic.main.fragment_materi_tiga.*
 
 
@@ -44,7 +46,11 @@ class MateriTigaFragment : Fragment() {
         textView42.text="   Makanan merupakan salah satu kebutuhan primer dari kehidupan manusia. Tanpa adanya makanan, manusia tidak mungkin bertahan hidup. Pada jaman dahulu manusia berburu untuk mempertahankan hidupnya. Mereka menikmati makanan dalam kondisi mentah. Seiring dengan kemajuan zaman, manusia mendapat hasrat untuk mendapat cita rasa yang lebih dari makanan yang disantapnya. Karena itulah, dalam pengolahan makanan, manusia melakukan banyak inovasi, seperti menemukan bumbu, bahan makanan yang baru, maupun cara pengolahannya."
         textView43.text="   Pengolahan makanan merupakan salah satu proses penerapan panas dari bahan mentah menjadi matang dengan cara yang sesuai untuk setiap bahan dasar dengan tujuan tertentu. Oleh karena itu, proses memasak hanya berlangsung selama panas mengenai bahan makanan. Untuk mengolah sebuah mengolah makanan sesuai dengan tujuannya, dikenal beberapa teknik mengolah makanan. Adapun teknik dasar pengolahan makanan dibedakan menjadi 2 yaitu, teknik pengolahan makanan panas basah (moist heat cooking) dan teknik pengolahan panas kering ( dry heat cooking ). \n" +
                 "Perhatikan dan amati gambar pengolahan makanan berikut ini!\n"
-
+        textViewmateri3.text="Berdasarkan gambar tersebut, menurut kamu gambar manakah yang menunjukkan teknik pengolahan panas basah (moist heat cooking)? ( pilihan jawaban a atau b)"
+        textViewmaterilast.text="     Teknik dasar dalam pengolahan makanan adalah mengolah bahan makanan dengan berbagai macam teknik atau cara. Apakah sebelumnya kamu sudah mengetahui teknik-teknik dalam pengolahan makanan? ( Ya atau Tidak)\n" +
+                "Amatilah video-video ini dengan seksama!\n"
+        Picasso.get().load(R.drawable.materi3aa).into(imageViewMaterA)
+        Picasso.get().load(R.drawable.materi3b).into(imageViewMaterB)
         youtube_RV.layoutManager= LinearLayoutManager(activity)
         ytRecycleView = YoutubeRecycleView(ytViewModel.YoutubeLiveData.value!!)
         youtube_RV.adapter= ytRecycleView

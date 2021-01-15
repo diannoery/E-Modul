@@ -35,13 +35,13 @@ class KikdRecycleView(private var dataKikd : MutableList<KiKdList>): RecyclerVie
 
         holder.Kikd.text = list_materi
         if (list_materi == "Peralatan Pengelolahan Makanan"){
-            Picasso.get().load(R.drawable.alatmasak).into(holder.image)
+            Picasso.get().load(R.drawable.materi4).fit().into(holder.image)
         } else if (list_materi == "Potongan Bahan Makananan"){
-            Picasso.get().load(R.drawable.potongan).into(holder.image)
+            Picasso.get().load(R.drawable.materi3).fit().into(holder.image)
         }else if (list_materi == "Teknik Pengolahan Makanan"){
-            Picasso.get().load(R.drawable.cooking).into(holder.image)
+            Picasso.get().load(R.drawable.materi2).fit().centerCrop().into(holder.image)
         }else if (list_materi == "Bumbu Dasar dan Turunannya Pada Masakan Indonesia"){
-            Picasso.get().load(R.drawable.bumbu).into(holder.image)
+            Picasso.get().load(R.drawable.materi1).into(holder.image)
         }
         val activity = holder.itemView.context as Activity
         holder.itemView.kikd.setOnClickListener{
